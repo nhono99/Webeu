@@ -1,0 +1,11 @@
+c:\users\tiffany\source\repos\Webeu\Webeu\bin\Debug\netcoreapp2.0\Webeu.deps.json
+c:\users\tiffany\source\repos\Webeu\Webeu\bin\Debug\netcoreapp2.0\Webeu.runtimeconfig.json
+c:\users\tiffany\source\repos\Webeu\Webeu\bin\Debug\netcoreapp2.0\Webeu.runtimeconfig.dev.json
+c:\users\tiffany\source\repos\Webeu\Webeu\bin\Debug\netcoreapp2.0\Webeu.dll
+c:\users\tiffany\source\repos\Webeu\Webeu\obj\Debug\netcoreapp2.0\Webeu.csprojAssemblyReference.cache
+c:\users\tiffany\source\repos\Webeu\Webeu\obj\Debug\netcoreapp2.0\Webeu.csproj.CoreCompileInputs.cache
+c:\users\tiffany\source\repos\Webeu\Webeu\obj\Debug\netcoreapp2.0\Webeu.AssemblyInfoInputs.cache
+c:\users\tiffany\source\repos\Webeu\Webeu\obj\Debug\netcoreapp2.0\Webeu.AssemblyInfo.cs
+c:\users\tiffany\source\repos\Webeu\Webeu\bin\Debug\netcoreapp2.0\Webeu.pdb
+c:\users\tiffany\source\repos\Webeu\Webeu\obj\Debug\netcoreapp2.0\Webeu.dll
+c:\users\tiffany\source\repos\Webeu\Webeu\obj\Debug\netcoreapp2.0\Webeu.pdb

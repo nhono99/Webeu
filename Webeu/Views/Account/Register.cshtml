@@ -1,0 +1,81 @@
+﻿@model RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="row">
+    <form asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            @*fname*@
+            <div class="row">
+                <div class="col-sm-2">
+                    <label asp-for="FirstName" class="custom-label"></label>
+                </div>
+                <div class="col-sm-4">
+                    <input asp-for="FirstName" class="form-control" />
+                </div>
+            </div>
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            @*lname*@
+            <div class="row">
+                <div class="col-sm-2">
+                    <label asp-for="LastName" class="custom-label"></label>
+                </div>
+                <div class="col-sm-4">
+                    <input asp-for="LastName" class="form-control" />
+                </div>
+            </div>
+            <span asp-validation-for="LastName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            @*email*@
+            <div class="row">
+                <div class="col-sm-2">
+                    <label asp-for="Email" class="custom-label"></label>
+                </div>
+                <div class="col-sm-4">
+                    <input asp-for="Email" class="form-control" />
+                </div>
+            </div>
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            @*pwd*@
+            <div class="row">
+                <div class="col-sm-2">
+                    <label asp-for="Password" class="custom-label"></label>
+                </div>
+                <div class="col-sm-4">
+                    <input asp-for="Password" class="form-control" />
+                </div>
+            </div>
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            @*cpwd*@
+            <div class="row">
+                <div class="col-sm-2">
+                    <label asp-for="ConfirmPassword" class="custom-label"></label>
+                </div>
+                <div class="col-sm-4">
+                    <input asp-for="ConfirmPassword" class="form-control" />
+                </div>
+            </div>
+            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+        </div>
+    
+        <div class="form-group">
+            <button type="submit" class="btn btn-sm btn-primary">Register</button>
+        </div>
+    </form>
+</div>
+
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
