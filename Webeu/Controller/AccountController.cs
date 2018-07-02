@@ -49,7 +49,7 @@ namespace Webeu.Controllers
                 }
                catch(Exception ex)
                 {
-                    return Error();
+                    return Error(ex.InnerException.Message);
                     //return RedirectToAction(nameof(ExceptionPageController.Index), "ExceptionPage", new {Err } );
                     //return RedirectToAction(nameof(HomeController.Index), "Home");
                 }
@@ -60,9 +60,9 @@ namespace Webeu.Controllers
 
       
         [HttpPost]
-        public IActionResult Error()
+        public IActionResult Error(string msg)
         {
-            return RedirectToAction(nameof(ExceptionPageController.Index), "ExceptionPage", new ExceptionPageModel { ErrorMessage ="Hello World!"});
+            return RedirectToAction(nameof(ExceptionPageController.Index), "ExceptionPage", new ExceptionPageModel { ErrorMessage = msg});
         }
         protected override void Dispose(bool disposing)
         {

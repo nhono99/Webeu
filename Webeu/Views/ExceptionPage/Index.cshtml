@@ -1,16 +1,10 @@
 ﻿@model  Webeu.Models.ExceptionPage.ExceptionPageModel
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Error Page";
+    
 }
 
 <h2>Index</h2>
-<p>  @Html.DisplayNameFor(m => m.ErrorMessage)</p>
-<p>arigato @Html.DisplayFor(m => m.ErrorMessage)</p>
+<h3>Message</h3>
+<p>@Html.DisplayFor(m => m.ErrorMessage)</p>
 
-<label asp-for="ErrorMessage"></label>
-<form method="get">
-    <p>form</p>
-    <p>  @Html.DisplayNameFor(m => m.ErrorMessage)</p>
-    <p>arigato @Html.DisplayFor(m => m.ErrorMessage)</p>
-    
-</form>

@@ -9,10 +9,11 @@ namespace Webeu.Controllers
     public class ExceptionPageController: Controller
     {
         
-        [HttpGet]
-        public IActionResult Index(string errMsg)
+       
+        public IActionResult Index(string errorMessage)
         {
-            ExceptionPageModel model = new ExceptionPageModel { ErrorMessage = errMsg};
+            ExceptionPageModel model = new ExceptionPageModel { ErrorMessage = errorMessage};
+            //model.ErrorMessage = errorMessage;
             return View(model);
         }
     }
