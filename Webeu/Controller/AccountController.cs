@@ -58,6 +58,22 @@ namespace Webeu.Controllers
             return View(model);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(LoginViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await _db.Users.FirstOrDefaultAsync(a => a.Email == model.Email && a.Password == model.Password);
+                if(user == null)
+                {
+                    return Error("User not found");
+                }
+                return Error("You found it");
+            }
+
+            return View(model);
+        }
       
         [HttpPost]
         public IActionResult Error(string msg)
