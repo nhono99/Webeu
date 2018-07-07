@@ -53,7 +53,8 @@ namespace Webeu.Controllers
                     //return RedirectToAction(nameof(ExceptionPageController.Index), "ExceptionPage", new {Err } );
                     //return RedirectToAction(nameof(HomeController.Index), "Home");
                 }
-                return RedirectToAction(nameof(Register));
+                TempData["registerComplete"] = "Registration success!";
+                return RedirectToAction(nameof(Login));
             }
             return View(model);
         }
@@ -67,7 +68,9 @@ namespace Webeu.Controllers
                 var user = await _db.Users.FirstOrDefaultAsync(a => a.Email == model.Email && a.Password == model.Password);
                 if(user == null)
                 {
-                    return Error("User not found");
+                    TempData["loginFailed"] = "Username/password does not match.";
+                    return View();
+                    //return Error("User not found");
                 }
                 return Error("You found it");
             }
